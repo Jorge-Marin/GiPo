@@ -1,0 +1,38 @@
+.carousel-item{
+    height: 400px;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    color: #2f1010;
+    font-size: 1rem;
+}
+
+a:hover{
+    color: #2f1010e1;
+}
+
+.box {
+    width: 338px;
+    height: 360px;
+    background: #CCC;
+    overflow: hidden;
+}
+
+.fix {
+    width: 347.9px;
+    
+}
+
+.box img {
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+.box img {
+    width: 100%;
+    height: auto;
+}
