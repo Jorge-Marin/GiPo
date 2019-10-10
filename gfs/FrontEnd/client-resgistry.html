@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login Ideale</title>
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <img src="icons/Logotype-Black.svg" width="80px;" style="padding-top: 5.6px;">
+        <h5 class="my-0 mr-md-auto font-weight-normal" style="font-size: 2rem">GiPo</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="GiPoHome.html">GiPo </a>
+        <a class="p-2 text-dark" href="http://localhost/gfs/FrontEnd/perfil-compa%c3%b1ia.php">Mi Cuenta</a>
+        <a class="p-2 text-dark" href="#">Curosear Empresas</a>
+        </nav>
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Crear una Cuenta</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" href="client-resgistry.html">Cliente</a>
+            <a class="dropdown-item" href="company-registry.html">Empresas</a>
+            </div>
+        </div>
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Iniciar Sesion</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" href="login-client.php">Cliente</a>
+            <a class="dropdown-item" href="login-company.php">Empresa</a>
+            </div>
+        </div>
+    </div>
+  <div class="container">
+    <div class="col-xl-6 login-div">
+        <img src="icons/Logotype-Black.png" class="logotype-client" width="100px" alt="">
+        <div class="row">
+          <div class="col-xl-12" style="text-align: center;">
+            <h2>Abrir una Cuenta</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-6">
+            <label for="firstname">Nombre</label>
+            <input type="text" id="firstname" class="form-control rounded-input-text" placeholder="Nombre" value="Jorge">
+            <div class="valid-feedback">
+                Ok
+            </div>
+            <div class="invalid-feedback">
+              Campo obligatorio
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <label>Apellido</label>
+            <input type="text" id="lastname" class="form-control rounded-input-text" placeholder="Apellido" value="Marin">
+            <div class="valid-feedback">
+              Ok
+            </div>
+            <div class="invalid-feedback">
+              Campo obligatorio
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+              <label>Correo Electronico</label>
+              <input type="text" name="email" onkeyup="validarEmailEnLinea(this.value)" class="form-control rounded-input-text" id="email" placeholder="Correo Electronico" value="jorgemarin9915@gmail.com">
+              <svg version="1.1" class="svg-verify" id="L4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+                <circle fill="#2C2C2C" stroke="none" cx="6" cy="50" r="6">
+                    <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.1"></animate>    
+                </circle>
+                <circle fill="#2C2C2C" stroke="none" cx="26" cy="50" r="6">
+                    <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.2"></animate>       
+                </circle>
+                <circle fill="#2C2C2C" stroke="none" cx="46" cy="50" r="6">
+                    <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.3"></animate>     
+                </circle>
+                </svg>
+              <div class="valid-feedback">
+                Ok
+              </div>
+              <div class="invalid-feedback" id="email-invalid-feedback">
+                Campo Obligatorio.
+              </div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-12">
+            <label>Contraseña</label>
+            <input type="password" name="password" class="form-control rounded-input-text" id="password" placeholder="Contraseña" value="asd.456">
+            <div class="valid-feedback">
+              Ok
+            </div>
+            <div class="invalid-feedback">
+              Campo obligatorio
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-12">
+            <label>Verificacion de Contraseña</label>
+            <input type="password" name="" class="form-control rounded-input-text" id="password-verify" placeholder="Verificacion de Contraseña" value="asd.456">
+            <div class="valid-feedback" id="wrong-password-fill">
+              Ok
+            </div>
+            <div class="invalid-feedback" id="wrong-password-nofill">
+              Campo obligatorio
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 9px;">
+            <div class="checkbox">
+                <input type="checkbox" class="input-assumpte" id="show-password" onclick="showPassword()">
+                <label for="show-password"></label><label style="font-size: 14px;">&nbsp Mostrar Contraseña</label>
+              </div>
+        </div>
+        <div class="row">
+          <div class="col-auto">
+            <p class="terms">Al crear una cuenta, aceptas nuestras <a href="#">Condiciones de Uso</a> y admites haber leído nuestro <a href="#">Aviso de Privacidad.</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-12">
+            <button id="btn-create" class="btn-logotype" onclick="createAccount()">Crear Cuenta</button>
+          </div>
+        </div>
+    </div>   
+  </div>
+  <div class="container-fluid">
+  </div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/create-user.js"></script>
+</body>
+</html>

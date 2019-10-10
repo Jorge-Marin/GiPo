@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Company Registration</title>
+    <link rel="stylesheet" href="css/all.css"><!--Font Awesome-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/company-registration.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+            <img src="icons/Logotype-Black.svg" width="80px;" style="padding-top: 5.6px;">
+            <h5 class="my-0 mr-md-auto font-weight-normal" style="font-size: 2rem">GiPo</h5>
+            <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-dark" href="GiPoHome.html">GiPo </a>
+            <a class="p-2 text-dark" href="http://localhost/gfs/FrontEnd/perfil-compa%c3%b1ia.php">Mi Cuenta</a>
+            <a class="p-2 text-dark" href="#">Curosear Empresas</a>
+            </nav>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Crear una Cuenta</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item" href="client-resgistry.html">Cliente</a>
+                <a class="dropdown-item" href="company-registry.html">Empresas</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Iniciar Sesion</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item" href="login-client.php">Cliente</a>
+                <a class="dropdown-item" href="login-company.php">Empresa</a>
+                </div>
+            </div>
+        </div>
+    <div class="background-cool">
+        <div class="container" style="background-color: transparent;">
+            <div class="row">
+                <div class="col-xl-5">
+                    <div class="container-logo">
+                        <img class="logo-company" src="icons/MONES.png">
+                    </div>
+                </div>
+                <div class="col-hr-vr">
+                    <hr class="hr-vertical">
+                </div>
+                <div class="col-xl-5">
+                    <div>
+                        <h2 style="color: white; font-weight: bolder;">Abrir una Cuentra para Empresa</h2>
+                        <label class="label-publicity">Bienvenido a la nueva era del marketing digital.
+                            <br>
+                            Que el mundo se entere quien eres!
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contaiener-fluid fst">
+        <h2>Agrega un Banner Publicitario</h2>
+    </div>
+    <div id="banner" class="container-fluid carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators" id="ol-indicators">
+        </ol>
+        <div id="carousel-image" class="carousel-inner">
+            <div class="add-banner">
+                <input type="file" id="file-banner" multiple>
+                <label for="file-banner" class="label-banner"><img src="icons/camera-solid.svg" width="25px;" alt=""> &nbspAgregar Banners Publicitatios</label>
+                <span class="tooltiptext">1064px * 395px</span>
+            </div>
+        </div>
+        <div class="container-fluid message-publicity" id="div-message-publicity">
+            <label id="label-message-banner" style="font-size: 2.3rem;">Recuerda Tu Imagen Importa</label>
+        </div>
+        <a class="carousel-control-prev" href="#banner" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#banner" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+        </a>
+        <div class="logotype-container" id="logotype">
+            <span class="logotype">
+                <input type="file" id="file-logotype">
+                <label for="file-logotype" class="label-logotype"><img src="icons/camera-solid.svg" width="20px;" alt="">&nbsp Logotipo</label>
+                <span class="tooltiptext">200px * 200px</span>
+            </span>
+            <div class="logotype-box">
+                <img id="logotype-image" src="" alt="">
+            </div>
+        </div>
+        <span id="tooltiptext-exterior">Este Campo es Obligatorio</span>
+    </div>
+    <div id="alert-files-size">
+        <label class="alert-message">
+            Solo Puede Agregar 3 Banners Publicitarios
+            <span id="banner-message-close" onclick="hideAlertFiles(this.id)" style="margin-left: 5px;"><img src="icons/close-simple.svg" width="20px" alt="">
+            </span>
+        </label>
+    </div>
+    <div id="success-message">
+    </div>
+    <div id="error-alert-message" style="display:none">
+        <label class="error-alert-message">
+            Ha Ocurrido un error por favor verifique su conexion e intentelo de nuevo.
+            <span id="error-send-data" onclick="hideAlertFiles(this.id)" style="margin-left: 5px;"><img src="icons/close-simple.svg" width="20px" alt="">
+            </span>
+        </label>
+    </div>
+    <div class="container" id="container-form-items">
+        <div class="row">
+            <div class="col-xl-6 contain-fields">
+                <form>
+                    <label>Nombre de la Empresa</label><br>
+                    <input class="form-control" id="name-company" type="text" value="La Curacao" placeholder="Ideale">
+                        <div class="valid-feedback">
+                            Ok
+                        </div>
+                        <div class="invalid-feedback">
+                            Campo obligatorio
+                        </div>
+
+                        
+                    <label>Email</label>
+                    <div>
+                        <input type="text" class="form-control" onkeyup="validarEmailEnLinea(this.value)" value="LacuracaoHNTGU@gmail.com" id="email" placeholder="Email" value="jorgemarin9915@gmail.com">
+                        <svg version="1.1" class="svg-verify" id="L4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+                            <circle fill="#2C2C2C" stroke="none" cx="6" cy="50" r="6">
+                                <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.1"></animate>    
+                            </circle>
+                            <circle fill="#2C2C2C" stroke="none" cx="26" cy="50" r="6">
+                                <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.2"></animate>       
+                            </circle>
+                            <circle fill="#2C2C2C" stroke="none" cx="46" cy="50" r="6">
+                                <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.3"></animate>     
+                            </circle>
+                        </svg>
+                        <div class="valid-feedback">
+                            Ok
+                        </div>
+                        <div class="invalid-feedback" id="email-invalid-feedback">
+                            Campo obligatorio
+                        </div>
+                    </div>
+                    <label>Contraseña &nbsp;<i id="see-password" onclick="showPassword()" class="far fa-eye see"></i></label><br>
+                    <div>
+                        <input class="form-control" type="password" onkeyup="validPasswordForUpKey(this.value)" value="Asd.4567" placeholder="Contraseña" id="password" name="password">
+                            <div class="valid-feedback">
+                                Ok
+                            </div>
+                            <div class="invalid-feedback" id='password-invalid-feedback'>
+                                Campo obligatorio
+                            </div>
+                    </div>
+                    <label>Numero Telefonico</label>
+                    <div class="mb-3" id="phones-numbers">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="input-phone-principal" class="form-control" placeholder="Numero Telefonico" value="504 98567542" aria-label="Numero Telefonico" aria-describedby="button-addon2">
+                        <div class="input-group-append" id="button-addon4">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"  onclick="addInputPhone()">+</button>
+                            <button class="btn btn-outline-secondary" type="button" id="btn-remove-phone" onclick="removeInputPhone()" disabled>-</button>
+                        </div>
+                        <div class="valid-feedback">
+                            Ok
+                        </div>
+                        <div class="invalid-feedback" id="invalid-phone-feedback-0">
+                            Campo obligatorio
+                        </div>
+                    </div>
+                    <label>Direccion</label><br>
+                    <div>
+                        <textarea id="text-direction" value="Tegucigalpa, boulevard Suyapa, avenida 1ro de enero" class="form-control" rows="3" placeholder=""></textarea>
+                        <div class="valid-feedback">
+                            Ok
+                        </div>
+                        <div class="invalid-feedback">
+                            Campo obligatorio
+                        </div>
+                    </div>
+                    <label>Pais</label>
+                    <div>
+                        <select id="select-country" class="form-control">
+                            <option value="Honduras">Honduras</option>
+                            <option value="CostaRica">Costa Rica</option>
+                            <option value="Salvador">El Salvador</option>
+                            <option value="Nicaragua">Nicaragua</option>
+                            <option value="Guatemala">Guatemala</option>
+                        </select>
+                        <div class="valid-feedback">
+                            Ok
+                        </div>
+                        <div class="invalid-feedback">
+                            Campo obligatorio
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xl-6 map-position">
+                <h2>Su Ubicacion</h2>
+                <div id="floating-panel">
+                    <input class="btn btn-outline-secondary" onclick="clearMarkers();" type="button" value="Esconder Marcadores">
+                    <input class="btn btn-outline-secondary" onclick="showMarkers();" type="button" value="Mostrar Todos">
+                    <input class="btn btn-outline-secondary" onclick="deleteMarkers();" type="button" value="Eliminar Marcadores">
+                </div>
+                <div id="map" class="form-control"></div>
+                <p class="card-text" style="color: gray;">
+                    Busque su Ubicacion y de click sobre ella para agregar la ubicacion
+                </p>
+                <div class="valid-feedback">
+                    Ok
+                </div>
+                <div class="invalid-feedback">
+                    Campo obligatorio
+                </div>
+            </div>
+        </div>
+        <div class="row information">
+                <div class="col-xl-6">
+                    <label style="font-size: 1.4rem; padding-left: 10px;" >Mision</label>
+                    <textarea class="form-control w-do-area" id="mision-textarea" placeholder="" value="asjlsjl"></textarea>
+                    <div class="valid-feedback">
+                        Ok
+                    </div>
+                    <div class="invalid-feedback">
+                        Campo obligatorio
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <label style="font-size: 1.4rem; padding-left: 10px;">Vision</label>
+                    <textarea class="form-control w-do-area" id="vision-textarea" placeholder="" value="asjlsjl"></textarea>
+                    <div class="valid-feedback">
+                        Ok
+                    </div>
+                    <div class="invalid-feedback">
+                        Campo obligatorio
+                    </div>
+                </div>
+        </div>    
+        <div class="row">
+            <div class="row social">
+                <span class="col-xl-4"><img src="icons/facebook-icon.svg" alt="" width="45px">
+                    <input type="text" id="faceboox-textbox" onkeyup="validUrlFacebook(this.value)" 
+                    value="https://www.facebook.com/LaCuracaoHN/"
+                    class="form-control social-input" placeholder="Facebook">
+                    <div class="valid-feedback">
+                        Ok
+                    </div>
+                    <div class="invalid-feedback">
+                        Url de Facebook no valida
+                    </div>
+                </span> 
+                <span class="col-xl-4"><img src="icons/twitter-icon.svg" alt="" width="45px">
+                    <input type="text" id="twitter-textbox" onkeyup="validUrlTwitter(this.value)"
+                    value="https://twitter.com/LaCuracaoES?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
+                    "  class="form-control social-input" placeholder="Twitter">
+                    <div class="valid-feedback">
+                        Ok
+                    </div>
+                    <div class="invalid-feedback">
+                        Url de twitter no valida
+                    </div>
+                </span>
+                <span class="col-xl-4"><img src="icons/instagram.svg" alt="" width="45px">
+                    <input type="text" id="instagram-textbox"onkeyup="validUrlInstagram(this.value)" value="https://www.instagram.com/lacuracaord/?hl=en" class="form-control social-input" placeholder="Instagram">
+                    <div class="valid-feedback">
+                        Ok
+                    </div>
+                    <div class="invalid-feedback">
+                        Url de Instagram no valida
+                    </div>
+                </span> 
+            </div>
+            <div class="col-xl-12 btn-register-container">
+                <button  id="btn-registrar" onclick="verifyFieldsCompany()">Finalizar Registro</button>
+            </div>
+        </div>   
+    </div> 
+    <div id="container-loader" style="height: 500px; padding: 5%; display: none">
+        <div class="loader" id="loeader-animation">Loading...</div>
+    </div>
+    <div class="container-fluid fn">
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxvGODTgLbBAiG5XQR-M886o1XsIHJmFo&callback=initMap" async defer></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script src="js/company-registration.js"></script>
+</body> 
+</html>
